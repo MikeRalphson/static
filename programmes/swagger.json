@@ -15,7 +15,7 @@
 			"url": "https://developer.bbc.co.uk/nitropubliclicence/"
 		}
 	},
-	"host": "bbc.co.uk",
+	"host": "nitro.api.bbci.co.uk",
 	"basePath": "/nitro/api",
 	"schemes": [
 		"http"
