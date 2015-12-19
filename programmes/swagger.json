@@ -89,7 +89,15 @@
 							"versions_availability"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/availabilities": {
@@ -118,7 +126,15 @@
 							"descending"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/broadcasts": {
@@ -161,7 +177,15 @@
 							"titles"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/groups": {
@@ -206,7 +230,15 @@
 							"related_links"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/images": {
@@ -236,7 +268,15 @@
 							"descending"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/items": {
@@ -280,7 +320,15 @@
 							"play_event"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/master_brands": {
@@ -322,21 +370,45 @@
 							"images"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/people": {
 			"get": {
 				"description": "Find the people behind and in programmes: cast, crew, guests and more",
 				"operationId": "findPeople",
-				"parameters": []
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/pips": {
 			"get": {
 				"description": "Look inside pips entities",
 				"operationId": "findPips",
-				"parameters": []
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/promotions": {
@@ -358,7 +430,15 @@
 							"related_links"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/schedules": {
@@ -402,21 +482,45 @@
 							"images"
 						]
 					}
-				]
+				],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/services": {
 			"get": {
 				"description": "Information about the linear services used for broadcast transmissions",
 				"operationId": "findServices",
-				"parameters": []
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		},
 		"/versions": {
 			"get": {
 				"description": "Metadata on editorial programme versions: original, signed, audio-described, etc",
 				"operationId": "findVersions",
-				"parameters": []
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Nitro response"
+					},
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
 			}
 		}
 	}
