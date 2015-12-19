@@ -152,14 +152,14 @@
 						"name": "children_of",
 						"in": "query",
 						"description": "filter for subset of programmes that have PID as immediate parent",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of programmes that have PID as ancestor",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -213,7 +213,7 @@
 						"name": "group",
 						"in": "query",
 						"description": "filter for subset of programmes which belong to the given group pid",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -248,7 +248,7 @@
 						"name": "item",
 						"in": "query",
 						"description": "filter for subset of programmes with linked to versions which have the given item pids",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -302,14 +302,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for programmes by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for programmes by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -317,14 +317,14 @@
 						"name": "people",
 						"in": "query",
 						"description": "filter for subset of programmes with contributions by given people PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of programmes having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -390,7 +390,7 @@
 						"name": "version",
 						"in": "query",
 						"description": "filter for subset of programmes with given PID as one of their versions",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					}
 				],
@@ -448,7 +448,7 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of availabilities that have PID as ancestor",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -554,7 +554,7 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of broadcasts that are descendants of the given programme PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -596,7 +596,7 @@
 						"name": "item",
 						"in": "query",
 						"description": "filter for subset of broadcasts with the given item performed on it",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -628,7 +628,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of broadcasts having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -691,7 +691,7 @@
 						"name": "version",
 						"in": "query",
 						"description": "filter for subset of broadcasts with given PID as their parent version",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					}
 				],
@@ -751,21 +751,21 @@
 						"name": "for_descendants_of",
 						"in": "query",
 						"description": "filter for groups related to given programme or its descendants",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "for_programme",
 						"in": "query",
 						"description": "filter for subset of groups directly related to a given programme",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "group",
 						"in": "query",
 						"description": "filter for subset of groups which belong to the given group pid",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -789,7 +789,7 @@
 						"name": "member",
 						"in": "query",
 						"description": "filter for subset of groups which contain an entity with the given pid as a member",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -814,14 +814,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for groups by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for groups by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -829,7 +829,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of seasons, collections, galleries or franchises having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -881,7 +881,7 @@
 						"name": "group",
 						"in": "query",
 						"description": "filter for images belonging to the given group (i.e. Gallery)",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -906,14 +906,14 @@
 						"name": "is_alternate_image_for",
 						"in": "query",
 						"description": "filter for alternate images by entity PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "is_image_for",
 						"in": "query",
 						"description": "filter for images by entity PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -938,14 +938,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for images by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for images by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -953,7 +953,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of images having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1076,14 +1076,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for items by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for items by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -1098,14 +1098,14 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of items matching one of the given PIDs",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "programme",
 						"in": "query",
 						"description": "filter for subset of items that are part of the given programme",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1201,14 +1201,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for masterbrands by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for masterbrands by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -1293,14 +1293,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for people by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for people by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -1308,7 +1308,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of people having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1400,7 +1400,7 @@
 						"name": "context",
 						"in": "query",
 						"description": "filter for subset of promotions belonging to a given context",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1425,14 +1425,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for promotions by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for promotions by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -1440,7 +1440,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of promotions having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1541,7 +1541,7 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that are descendants of the given programme PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1576,7 +1576,7 @@
 						"name": "group",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that have programmes in the given group",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1597,7 +1597,7 @@
 						"name": "item",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts with the given item performed on it",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1622,14 +1622,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for broadcasts and webcasts by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for broadcasts and webcasts by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -1644,7 +1644,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1714,7 +1714,7 @@
 						"name": "version",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts with given PID as their parent version",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					}
 				],
@@ -1776,14 +1776,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for services by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for services by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -1867,7 +1867,7 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of versions having given programme PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1899,14 +1899,14 @@
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for versions by partner ID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for versions by partner PID",
-						"type": "PID",
+						"type": "string",
 						"default": "s0000001",
 						"required": false
 					},
@@ -1914,7 +1914,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of versions having given PID",
-						"type": "PID",
+						"type": "string",
 						"required": false
 					}
 				],
