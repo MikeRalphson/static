@@ -152,14 +152,14 @@
 						"name": "children_of",
 						"in": "query",
 						"description": "filter for subset of programmes that have PID as immediate parent",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of programmes that have PID as ancestor",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -213,42 +213,42 @@
 						"name": "group",
 						"in": "query",
 						"description": "filter for subset of programmes which belong to the given group pid",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "initial_letter",
 						"in": "query",
 						"description": "filter for subset of programmes with title beginning with initial letter librarian style (ignoring leading 'The', 'An' (Welsh), etc) 0-9 a-z",
-						"type": "string",
+						"type": "character",
 						"required": false
 					},
 					{
 						"name": "initial_letter_end",
 						"in": "query",
 						"description": "Programmes with (librarian) titles whose initial letter is equal/before given letter. Use with initial_letter_start for a range",
-						"type": "string",
+						"type": "character",
 						"required": false
 					},
 					{
 						"name": "initial_letter_start",
 						"in": "query",
 						"description": "Programmes with (librarian) titles whose initial letter is equal/after given letter. Use with initial_letter_end for range.",
-						"type": "string",
+						"type": "character",
 						"required": false
 					},
 					{
 						"name": "initial_letter_strict",
 						"in": "query",
 						"description": "filter for subset of programmes with title beginning with initial letter",
-						"type": "string",
+						"type": "character",
 						"required": false
 					},
 					{
 						"name": "item",
 						"in": "query",
 						"description": "filter for subset of programmes with linked to versions which have the given item pids",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -284,42 +284,47 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for programmes by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for programmes by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
 						"name": "people",
 						"in": "query",
 						"description": "filter for subset of programmes with contributions by given people PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of programmes having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -385,7 +390,7 @@
 						"name": "version",
 						"in": "query",
 						"description": "filter for subset of programmes with given PID as one of their versions",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					}
 				],
@@ -443,7 +448,7 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of availabilities that have PID as ancestor",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -457,14 +462,18 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
@@ -545,21 +554,21 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of broadcasts that are descendants of the given programme PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "end_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts that end on or later than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "end_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that end on or earlier than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
@@ -587,21 +596,25 @@
 						"name": "item",
 						"in": "query",
 						"description": "filter for subset of broadcasts with the given item performed on it",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
@@ -615,7 +628,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of broadcasts having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -629,21 +642,21 @@
 						"name": "schedule_day",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on the specified day (BBC time)",
-						"type": "string",
+						"type": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or after the specified day (BBC time)",
-						"type": "string",
+						"type": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or before the specified day (BBC time)",
-						"type": "string",
+						"type": "date",
 						"required": false
 					},
 					{
@@ -664,21 +677,21 @@
 						"name": "start_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or later than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "start_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or earlier than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "version",
 						"in": "query",
 						"description": "filter for subset of broadcasts with given PID as their parent version",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					}
 				],
@@ -738,21 +751,21 @@
 						"name": "for_descendants_of",
 						"in": "query",
 						"description": "filter for groups related to given programme or its descendants",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "for_programme",
 						"in": "query",
 						"description": "filter for subset of groups directly related to a given programme",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "group",
 						"in": "query",
 						"description": "filter for subset of groups which belong to the given group pid",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -776,42 +789,47 @@
 						"name": "member",
 						"in": "query",
 						"description": "filter for subset of groups which contain an entity with the given pid as a member",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for groups by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for groups by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of seasons, collections, galleries or franchises having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -863,7 +881,7 @@
 						"name": "group",
 						"in": "query",
 						"description": "filter for images belonging to the given group (i.e. Gallery)",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -888,49 +906,54 @@
 						"name": "is_alternate_image_for",
 						"in": "query",
 						"description": "filter for alternate images by entity PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "is_image_for",
 						"in": "query",
 						"description": "filter for images by entity PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for images by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for images by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of images having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -1003,7 +1026,7 @@
 						"name": "id",
 						"in": "query",
 						"description": "filter for subset of items having given ID",
-						"type": "string",
+						"type": "ID",
 						"required": false
 					},
 					{
@@ -1035,28 +1058,33 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for items by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for items by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
@@ -1070,14 +1098,14 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of items matching one of the given PIDs",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "programme",
 						"in": "query",
 						"description": "filter for subset of items that are part of the given programme",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -1155,28 +1183,33 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for masterbrands by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for masterbrands by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
@@ -1228,7 +1261,7 @@
 						"name": "id",
 						"in": "query",
 						"description": "filter for subset of people having given ID",
-						"type": "string",
+						"type": "ID",
 						"required": false
 					},
 					{
@@ -1242,35 +1275,40 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for people by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for people by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of people having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -1307,14 +1345,18 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
@@ -1358,42 +1400,47 @@
 						"name": "context",
 						"in": "query",
 						"description": "filter for subset of promotions belonging to a given context",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for promotions by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for promotions by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of promotions having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -1494,21 +1541,21 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that are descendants of the given programme PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "end_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that end on or later than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "end_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that end on or earlier than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
@@ -1529,7 +1576,7 @@
 						"name": "group",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that have programmes in the given group",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -1550,35 +1597,40 @@
 						"name": "item",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts with the given item performed on it",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for broadcasts and webcasts by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for broadcasts and webcasts by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
@@ -1592,7 +1644,7 @@
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -1606,28 +1658,28 @@
 						"name": "repeat",
 						"in": "query",
 						"description": "filter to show either only repeats or non-repeats",
-						"type": "string",
+						"type": "boolean",
 						"required": false
 					},
 					{
 						"name": "schedule_day",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on the specified day (BBC time)",
-						"type": "string",
+						"type": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or after the specified day (BBC time)",
-						"type": "string",
+						"type": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or before the specified day (BBC time)",
-						"type": "string",
+						"type": "date",
 						"required": false
 					},
 					{
@@ -1648,21 +1700,21 @@
 						"name": "start_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or later than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "start_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or earlier than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "version",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts with given PID as their parent version",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					}
 				],
@@ -1685,14 +1737,14 @@
 						"name": "end_from",
 						"in": "query",
 						"description": "Return services that end on or later than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "end_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that end on or earlier than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
@@ -1706,28 +1758,33 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for services by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for services by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
@@ -1766,14 +1823,14 @@
 						"name": "start_from",
 						"in": "query",
 						"description": "Return services that start on or later than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					},
 					{
 						"name": "start_to",
 						"in": "query",
 						"description": "Return services that start earlier than the specified datetime",
-						"type": "string",
+						"type": "datetime",
 						"required": false
 					}
 				],
@@ -1810,7 +1867,7 @@
 						"name": "descendants_of",
 						"in": "query",
 						"description": "filter for subset of versions having given programme PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
@@ -1824,35 +1881,40 @@
 						"name": "page",
 						"in": "query",
 						"description": "which page of results to return",
-						"type": "string",
+						"type": "integer",
+						"default": "1",
+						"minimum": 1,
 						"required": false
 					},
 					{
 						"name": "page_size",
 						"in": "query",
 						"description": "number of results in each page",
-						"type": "string",
+						"type": "integer",
+						"default": "10",
+						"maximum": 300,
 						"required": false
 					},
 					{
 						"name": "partner_id",
 						"in": "query",
 						"description": "filter for versions by partner ID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					},
 					{
 						"name": "partner_pid",
 						"in": "query",
 						"description": "filter for versions by partner PID",
-						"type": "string",
+						"type": "PID",
+						"default": "s0000001",
 						"required": false
 					},
 					{
 						"name": "pid",
 						"in": "query",
 						"description": "filter for subset of versions having given PID",
-						"type": "string",
+						"type": "PID",
 						"required": false
 					}
 				],
