@@ -561,14 +561,16 @@
 						"name": "end_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts that end on or later than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
 						"name": "end_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that end on or earlier than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
@@ -642,21 +644,24 @@
 						"name": "schedule_day",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on the specified day (BBC time)",
-						"type": "date",
+						"type": "string",
+						"format": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or after the specified day (BBC time)",
-						"type": "date",
+						"type": "string",
+						"format": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or before the specified day (BBC time)",
-						"type": "date",
+						"type": "string",
+						"format": "date",
 						"required": false
 					},
 					{
@@ -677,14 +682,16 @@
 						"name": "start_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or later than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
 						"name": "start_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that start on or earlier than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
@@ -1548,14 +1555,16 @@
 						"name": "end_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that end on or later than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
 						"name": "end_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that end on or earlier than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
@@ -1665,21 +1674,24 @@
 						"name": "schedule_day",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on the specified day (BBC time)",
-						"type": "date",
+						"type": "string",
+						"format": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or after the specified day (BBC time)",
-						"type": "date",
+						"type": "string",
+						"format": "date",
 						"required": false
 					},
 					{
 						"name": "schedule_day_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or before the specified day (BBC time)",
-						"type": "date",
+						"type": "string",
+						"format": "date",
 						"required": false
 					},
 					{
@@ -1700,14 +1712,16 @@
 						"name": "start_from",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or later than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
 						"name": "start_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that start on or earlier than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
@@ -1737,14 +1751,16 @@
 						"name": "end_from",
 						"in": "query",
 						"description": "Return services that end on or later than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
 						"name": "end_to",
 						"in": "query",
 						"description": "filter for subset of broadcasts that end on or earlier than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
@@ -1823,14 +1839,16 @@
 						"name": "start_from",
 						"in": "query",
 						"description": "Return services that start on or later than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					},
 					{
 						"name": "start_to",
 						"in": "query",
 						"description": "Return services that start earlier than the specified datetime",
-						"type": "datetime",
+						"type": "string",
+						"format": "date-time",
 						"required": false
 					}
 				],
