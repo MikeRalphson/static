@@ -1033,7 +1033,7 @@
 						"name": "id",
 						"in": "query",
 						"description": "filter for subset of items having given ID",
-						"type": "ID",
+						"type": "string",
 						"required": false
 					},
 					{
@@ -1268,7 +1268,7 @@
 						"name": "id",
 						"in": "query",
 						"description": "filter for subset of people having given ID",
-						"type": "ID",
+						"type": "string",
 						"required": false
 					},
 					{
