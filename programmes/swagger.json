@@ -481,12 +481,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/availabilities": {
@@ -599,12 +594,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/broadcasts": {
@@ -865,12 +855,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/groups": {
@@ -1045,12 +1030,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/images": {
@@ -1202,12 +1182,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/items": {
@@ -1394,12 +1369,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/master_brands": {
@@ -1516,12 +1486,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/people": {
@@ -1653,12 +1618,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/pips": {
@@ -1703,12 +1663,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/promotions": {
@@ -1852,12 +1807,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/schedules": {
@@ -2173,12 +2123,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/services": {
@@ -2322,12 +2267,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/versions": {
@@ -2443,12 +2383,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/": {
@@ -2467,12 +2402,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		},
 		"/schema": {
@@ -2491,12 +2421,7 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				},
-				"security": [
-					{
-						"api_key": []
-					}
-				]
+				}
 			}
 		}
 	},
@@ -2506,5 +2431,10 @@
 			"name": "api_key",
 			"in": "query"
 		}
-	}
+	},
+	"security": [
+		{
+			"api_key": []
+		}
+	]
 }
