@@ -17,6 +17,16 @@
 	},
 	"host": "nitro.api.bbci.co.uk",
 	"basePath": "/nitro/api",
+	"tags": [
+		{
+			"name": "feeds",
+			"description": "Nitro data feeds"
+		},
+		{
+			"name": "schema",
+			"description": "Nitro metadata"
+		}
+	],
 	"schemes": [
 		"http"
 	],
@@ -29,6 +39,9 @@
 	],
 	"paths": {
 		"/programmes": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
 				"operationId": "findProgrammes",
@@ -409,6 +422,9 @@
 			}
 		},
 		"/availabilities": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Discover details of on-demand availability for programmes and their versions",
 				"operationId": "findAvailability",
@@ -508,6 +524,9 @@
 			}
 		},
 		"/broadcasts": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Build schedules and find metadata for TV and radio broadcasts",
 				"operationId": "findBroadcasts",
@@ -717,6 +736,9 @@
 			}
 		},
 		"/groups": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Find metadata for curated groups: seasons, collections, galleries or franchises",
 				"operationId": "findGroups",
@@ -862,6 +884,9 @@
 			}
 		},
 		"/images": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Find metadata for images",
 				"operationId": "findImages",
@@ -986,6 +1011,9 @@
 			}
 		},
 		"/items": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Look inside programmes to find segments: chapters, tracks and more",
 				"operationId": "findItems",
@@ -1145,6 +1173,9 @@
 			}
 		},
 		"/master_brands": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "List all Master Brands",
 				"operationId": "findMasterbrands",
@@ -1242,6 +1273,9 @@
 			}
 		},
 		"/people": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Find the people behind and in programmes: cast, crew, guests and more",
 				"operationId": "findPeople",
@@ -1348,6 +1382,9 @@
 			}
 		},
 		"/pips": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Look inside pips entities",
 				"operationId": "findPips",
@@ -1389,6 +1426,9 @@
 			}
 		},
 		"/promotions": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Discover metadata for content promotions",
 				"operationId": "findPromotions",
@@ -1501,6 +1541,9 @@
 			}
 		},
 		"/schedules": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Build schedules and find metadata for TV and radio broadcasts and webcasts",
 				"operationId": "findSchedules",
@@ -1747,6 +1790,9 @@
 			}
 		},
 		"/services": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Information about the linear services used for broadcast transmissions",
 				"operationId": "findServices",
@@ -1867,6 +1913,9 @@
 			}
 		},
 		"/versions": {
+			"tags": [
+				"feeds"
+			],
 			"get": {
 				"description": "Metadata on editorial programme versions: original, signed, audio-described, etc",
 				"operationId": "findVersions",
@@ -1951,6 +2000,9 @@
 			}
 		},
 		"/": {
+			"tags": [
+				"schema"
+			],
 			"get": {
 				"description": "Get API definition",
 				"operationId": "getAPI",
@@ -1966,6 +2018,9 @@
 			}
 		},
 		"/schema": {
+			"tags": [
+				"schema"
+			],
 			"get": {
 				"description": "Get schema definition",
 				"operationId": "getXSD",
