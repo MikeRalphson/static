@@ -2000,11 +2000,11 @@
 			}
 		},
 		"/": {
-			"tags": [
-				"schema"
-			],
 			"get": {
 				"description": "Get API definition",
+				"tags": [
+					"schema"
+				],
 				"operationId": "getAPI",
 				"parameters": [],
 				"responses": {
@@ -2018,11 +2018,11 @@
 			}
 		},
 		"/schema": {
-			"tags": [
-				"schema"
-			],
 			"get": {
 				"description": "Get schema definition",
+				"tags": [
+					"schema"
+				],
 				"operationId": "getXSD",
 				"parameters": [],
 				"responses": {
