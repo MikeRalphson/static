@@ -167,6 +167,8 @@
 						"in": "query",
 						"description": "filter for subset of programmes that have PID as immediate parent",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -174,6 +176,8 @@
 						"in": "query",
 						"description": "filter for subset of programmes that have PID as ancestor",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -228,6 +232,8 @@
 						"in": "query",
 						"description": "filter for subset of programmes which belong to the given group pid",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -267,6 +273,8 @@
 						"in": "query",
 						"description": "filter for subset of programmes with linked to versions which have the given item pids",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -303,7 +311,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -312,7 +320,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -321,6 +329,8 @@
 						"in": "query",
 						"description": "filter for programmes by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -328,6 +338,8 @@
 						"in": "query",
 						"description": "filter for programmes by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -336,6 +348,8 @@
 						"in": "query",
 						"description": "filter for subset of programmes with contributions by given people PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -343,6 +357,8 @@
 						"in": "query",
 						"description": "filter for subset of programmes having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -409,6 +425,8 @@
 						"in": "query",
 						"description": "filter for subset of programmes with given PID as one of their versions",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					}
 				],
@@ -419,7 +437,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/availabilities": {
@@ -471,6 +494,8 @@
 						"in": "query",
 						"description": "filter for subset of availabilities that have PID as ancestor",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -485,7 +510,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -494,7 +519,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -522,7 +547,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/broadcasts": {
@@ -581,6 +611,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts that are descendants of the given programme PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -625,6 +657,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts with the given item performed on it",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -632,7 +666,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -641,7 +675,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -657,6 +691,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -725,6 +761,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts with given PID as their parent version",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					}
 				],
@@ -735,7 +773,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/groups": {
@@ -789,6 +832,8 @@
 						"in": "query",
 						"description": "filter for groups related to given programme or its descendants",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -796,6 +841,8 @@
 						"in": "query",
 						"description": "filter for subset of groups directly related to a given programme",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -803,6 +850,8 @@
 						"in": "query",
 						"description": "filter for subset of groups which belong to the given group pid",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -827,6 +876,8 @@
 						"in": "query",
 						"description": "filter for subset of groups which contain an entity with the given pid as a member",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -834,7 +885,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -843,7 +894,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -852,6 +903,8 @@
 						"in": "query",
 						"description": "filter for groups by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -859,6 +912,8 @@
 						"in": "query",
 						"description": "filter for groups by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -867,6 +922,8 @@
 						"in": "query",
 						"description": "filter for subset of seasons, collections, galleries or franchises having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -884,7 +941,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/images": {
@@ -923,6 +985,8 @@
 						"in": "query",
 						"description": "filter for images belonging to the given group (i.e. Gallery)",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -948,6 +1012,8 @@
 						"in": "query",
 						"description": "filter for alternate images by entity PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -955,6 +1021,8 @@
 						"in": "query",
 						"description": "filter for images by entity PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -962,7 +1030,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -971,7 +1039,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -980,6 +1048,8 @@
 						"in": "query",
 						"description": "filter for images by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -987,6 +1057,8 @@
 						"in": "query",
 						"description": "filter for images by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -995,6 +1067,8 @@
 						"in": "query",
 						"description": "filter for subset of images having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1012,7 +1086,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/items": {
@@ -1104,7 +1183,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1113,7 +1192,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1122,6 +1201,8 @@
 						"in": "query",
 						"description": "filter for items by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1129,6 +1210,8 @@
 						"in": "query",
 						"description": "filter for items by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -1144,6 +1227,8 @@
 						"in": "query",
 						"description": "filter for subset of items matching one of the given PIDs",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1151,6 +1236,8 @@
 						"in": "query",
 						"description": "filter for subset of items that are part of the given programme",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1175,7 +1262,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/master_brands": {
@@ -1233,7 +1325,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1242,7 +1334,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1251,6 +1343,8 @@
 						"in": "query",
 						"description": "filter for masterbrands by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1258,6 +1352,8 @@
 						"in": "query",
 						"description": "filter for masterbrands by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -1276,7 +1372,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/people": {
@@ -1329,7 +1430,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1338,7 +1439,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1347,6 +1448,8 @@
 						"in": "query",
 						"description": "filter for people by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1354,6 +1457,8 @@
 						"in": "query",
 						"description": "filter for people by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -1362,6 +1467,8 @@
 						"in": "query",
 						"description": "filter for subset of people having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1386,7 +1493,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/pips": {
@@ -1403,7 +1515,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1412,7 +1524,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1431,7 +1543,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/promotions": {
@@ -1462,6 +1579,8 @@
 						"in": "query",
 						"description": "filter for subset of promotions belonging to a given context",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1469,7 +1588,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1478,7 +1597,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1487,6 +1606,8 @@
 						"in": "query",
 						"description": "filter for promotions by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1494,6 +1615,8 @@
 						"in": "query",
 						"description": "filter for promotions by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -1502,6 +1625,8 @@
 						"in": "query",
 						"description": "filter for subset of promotions having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1547,7 +1672,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/schedules": {
@@ -1607,6 +1737,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that are descendants of the given programme PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1644,6 +1776,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts that have programmes in the given group",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1665,6 +1799,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts with the given item performed on it",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1672,7 +1808,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1681,7 +1817,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1690,6 +1826,8 @@
 						"in": "query",
 						"description": "filter for broadcasts and webcasts by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1697,6 +1835,8 @@
 						"in": "query",
 						"description": "filter for broadcasts and webcasts by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -1712,6 +1852,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1787,6 +1929,8 @@
 						"in": "query",
 						"description": "filter for subset of broadcasts and webcasts with given PID as their parent version",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					}
 				],
@@ -1797,7 +1941,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/services": {
@@ -1837,7 +1986,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1846,7 +1995,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1855,6 +2004,8 @@
 						"in": "query",
 						"description": "filter for services by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1862,6 +2013,8 @@
 						"in": "query",
 						"description": "filter for services by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -1921,7 +2074,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/versions": {
@@ -1952,6 +2110,8 @@
 						"in": "query",
 						"description": "filter for subset of versions having given programme PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1966,7 +2126,7 @@
 						"in": "query",
 						"description": "which page of results to return",
 						"type": "integer",
-						"default": "1",
+						"default": 1,
 						"minimum": 1,
 						"required": false
 					},
@@ -1975,7 +2135,7 @@
 						"in": "query",
 						"description": "number of results in each page",
 						"type": "integer",
-						"default": "10",
+						"default": 10,
 						"maximum": 300,
 						"required": false
 					},
@@ -1984,6 +2144,8 @@
 						"in": "query",
 						"description": "filter for versions by partner ID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					},
 					{
@@ -1991,6 +2153,8 @@
 						"in": "query",
 						"description": "filter for versions by partner PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"default": "s0000001",
 						"required": false
 					},
@@ -1999,6 +2163,8 @@
 						"in": "query",
 						"description": "filter for subset of versions having given PID",
 						"type": "string",
+						"minLength": 8,
+						"pattern": {},
 						"required": false
 					}
 				],
@@ -2009,7 +2175,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/": {
@@ -2028,7 +2199,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		},
 		"/schema": {
@@ -2047,7 +2223,12 @@
 					"default": {
 						"description": "Unexpected error"
 					}
-				}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				]
 			}
 		}
 	},
