@@ -6,9 +6,9 @@
 		"description": "BBC Nitro is the BBC's application programming interface (API) for BBC Programmes Metadata.",
 		"termsOfService": "http://www.bbc.co.uk/terms/",
 		"contact": {
-			"name": "Nitro Swagger Resource",
-			"email": "mike.ralphson@gmail.com",
-			"url": "http://mermade.github.io/"
+			"name": "Open Nitro Project",
+			"email": "Jon.Billings@bbc.co.uk",
+			"url": "http://developer.bbc.co.uk/"
 		},
 		"license": {
 			"name": "Nitro Public License",
