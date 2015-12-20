@@ -39,11 +39,11 @@
 	],
 	"paths": {
 		"/programmes": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findProgrammes",
 				"parameters": [
 					{
@@ -422,11 +422,11 @@
 			}
 		},
 		"/availabilities": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Discover details of on-demand availability for programmes and their versions",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findAvailability",
 				"parameters": [
 					{
@@ -524,11 +524,11 @@
 			}
 		},
 		"/broadcasts": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Build schedules and find metadata for TV and radio broadcasts",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findBroadcasts",
 				"parameters": [
 					{
@@ -736,11 +736,11 @@
 			}
 		},
 		"/groups": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Find metadata for curated groups: seasons, collections, galleries or franchises",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findGroups",
 				"parameters": [
 					{
@@ -884,11 +884,11 @@
 			}
 		},
 		"/images": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Find metadata for images",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findImages",
 				"parameters": [
 					{
@@ -1011,11 +1011,11 @@
 			}
 		},
 		"/items": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Look inside programmes to find segments: chapters, tracks and more",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findItems",
 				"parameters": [
 					{
@@ -1173,11 +1173,11 @@
 			}
 		},
 		"/master_brands": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "List all Master Brands",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findMasterbrands",
 				"parameters": [
 					{
@@ -1273,11 +1273,11 @@
 			}
 		},
 		"/people": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Find the people behind and in programmes: cast, crew, guests and more",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findPeople",
 				"parameters": [
 					{
@@ -1382,11 +1382,11 @@
 			}
 		},
 		"/pips": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Look inside pips entities",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findPips",
 				"parameters": [
 					{
@@ -1426,11 +1426,11 @@
 			}
 		},
 		"/promotions": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Discover metadata for content promotions",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findPromotions",
 				"parameters": [
 					{
@@ -1541,11 +1541,11 @@
 			}
 		},
 		"/schedules": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Build schedules and find metadata for TV and radio broadcasts and webcasts",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findSchedules",
 				"parameters": [
 					{
@@ -1790,11 +1790,11 @@
 			}
 		},
 		"/services": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Information about the linear services used for broadcast transmissions",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findServices",
 				"parameters": [
 					{
@@ -1913,11 +1913,11 @@
 			}
 		},
 		"/versions": {
-			"tags": [
-				"feeds"
-			],
 			"get": {
 				"description": "Metadata on editorial programme versions: original, signed, audio-described, etc",
+				"tags": [
+					"feeds"
+				],
 				"operationId": "findVersions",
 				"parameters": [
 					{
