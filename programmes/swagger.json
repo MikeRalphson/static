@@ -2481,7 +2481,7 @@
 		}
 	},
 	"definitions": {
-		"errorModel": {
+		"ErrorModel": {
 			"type": "object",
 			"properties": {
 				"fault": {
