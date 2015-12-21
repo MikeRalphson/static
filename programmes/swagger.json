@@ -489,7 +489,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -602,7 +605,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -863,7 +869,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -1038,7 +1047,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -1190,7 +1202,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -1377,7 +1392,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -1494,7 +1512,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -1626,7 +1647,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -1671,7 +1695,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -1815,7 +1842,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -2131,7 +2161,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -2275,7 +2308,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -2391,7 +2427,10 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
@@ -2410,15 +2449,18 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
 					}
 				}
 			}
 		},
 		"/schema": {
 			"get": {
-				"description": "Get schema definition",
-				"summary": "Get schema definition",
+				"description": "Get Schema definition",
+				"summary": "Get Schema definition",
 				"tags": [
 					"schema"
 				],
@@ -2429,7 +2471,33 @@
 						"description": "Nitro response"
 					},
 					"default": {
-						"description": "Unexpected error"
+						"description": "Unexpected error",
+						"schema": {
+							"$ref": "#/definitions/ErrorModel"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"errorModel": {
+			"type": "object",
+			"properties": {
+				"fault": {
+					"type": "object",
+					"properties": {
+						"faultString": {
+							"type": "string"
+						},
+						"detail": {
+							"type": "object",
+							"properties": {
+								"errorcode": {
+									"type": "string"
+								}
+							}
+						}
 					}
 				}
 			}
