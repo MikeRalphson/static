@@ -267,6 +267,7 @@
 						"in": "query",
 						"description": "filter for subset of programmes with title beginning with initial letter librarian style (ignoring leading 'The', 'An' (Welsh), etc) 0-9 a-z",
 						"type": "string",
+						"minLength": 1,
 						"maxLength": 1,
 						"required": false
 					},
@@ -275,6 +276,7 @@
 						"in": "query",
 						"description": "Programmes with (librarian) titles whose initial letter is equal/before given letter. Use with initial_letter_start for a range",
 						"type": "string",
+						"minLength": 1,
 						"maxLength": 1,
 						"required": false
 					},
@@ -283,6 +285,7 @@
 						"in": "query",
 						"description": "Programmes with (librarian) titles whose initial letter is equal/after given letter. Use with initial_letter_end for range.",
 						"type": "string",
+						"minLength": 1,
 						"maxLength": 1,
 						"required": false
 					},
@@ -293,7 +296,8 @@
 						"type": "array",
 						"maxLength": 1,
 						"items": {
-							"type": "string"
+							"type": "string",
+							"minLength": 1
 						},
 						"collectionFormat": "multi",
 						"required": false
