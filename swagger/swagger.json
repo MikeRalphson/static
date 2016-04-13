@@ -2544,7 +2544,7 @@
 				"parameters": [],
 				"responses": {
 					"200": {
-						"description": "Nitro response"
+						"description": "Metadata response"
 					},
 					"default": {
 						"description": "Unexpected error",
@@ -2566,7 +2566,7 @@
 				"parameters": [],
 				"responses": {
 					"200": {
-						"description": "Nitro response"
+						"description": "Metadata response"
 					},
 					"default": {
 						"description": "Unexpected error",
@@ -2595,7 +2595,7 @@
 			"type": "object",
 			"properties": {
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				}
 			},
@@ -2608,7 +2608,7 @@
 			"type": "object",
 			"properties": {
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				}
 			},
@@ -2623,26 +2623,26 @@
 				"page_size": {
 					"type": "integer"
 				},
-				"music": {
-					"$ref": "#/definitions/music"
+				"other": {
+					"$ref": "#/definitions/other"
 				},
-				"clip": {
-					"$ref": "#/definitions/clip"
+				"window": {
+					"$ref": "#/definitions/window"
 				},
-				"series": {
-					"$ref": "#/definitions/series"
+				"more_than": {
+					"type": "integer"
 				},
 				"episode": {
 					"$ref": "#/definitions/episode"
 				},
-				"page": {
-					"type": "integer"
-				},
-				"total": {
-					"type": "integer"
-				},
 				"brand": {
 					"$ref": "#/definitions/brand"
+				},
+				"broadcast": {
+					"$ref": "#/definitions/broadcast"
+				},
+				"music": {
+					"$ref": "#/definitions/music"
 				},
 				"speech": {
 					"$ref": "#/definitions/speech"
@@ -2650,32 +2650,8 @@
 				"gallery": {
 					"$ref": "#/definitions/gallery"
 				},
-				"window": {
-					"$ref": "#/definitions/window"
-				},
-				"season": {
-					"$ref": "#/definitions/season"
-				},
-				"version_group": {
-					"$ref": "#/definitions/version_group"
-				},
-				"other": {
-					"$ref": "#/definitions/other"
-				},
-				"availability": {
-					"$ref": "#/definitions/availability"
-				},
-				"image": {
-					"$ref": "#/definitions/image"
-				},
-				"contributor": {
-					"$ref": "#/definitions/contributor"
-				},
-				"more_than": {
+				"page": {
 					"type": "integer"
-				},
-				"chapter": {
-					"$ref": "#/definitions/chapter"
 				},
 				"highlight": {
 					"$ref": "#/definitions/highlight"
@@ -2683,20 +2659,44 @@
 				"promotion": {
 					"$ref": "#/definitions/promotion"
 				},
+				"availability": {
+					"$ref": "#/definitions/availability"
+				},
+				"season": {
+					"$ref": "#/definitions/season"
+				},
+				"clip": {
+					"$ref": "#/definitions/clip"
+				},
+				"franchise": {
+					"$ref": "#/definitions/franchise"
+				},
+				"total": {
+					"type": "integer"
+				},
+				"version_group": {
+					"$ref": "#/definitions/version_group"
+				},
 				"collection": {
 					"$ref": "#/definitions/collection"
 				},
 				"service": {
 					"$ref": "#/definitions/service"
 				},
+				"series": {
+					"$ref": "#/definitions/series"
+				},
+				"chapter": {
+					"$ref": "#/definitions/chapter"
+				},
+				"image": {
+					"$ref": "#/definitions/image"
+				},
+				"contributor": {
+					"$ref": "#/definitions/contributor"
+				},
 				"master_brand": {
 					"$ref": "#/definitions/master_brand"
-				},
-				"franchise": {
-					"$ref": "#/definitions/franchise"
-				},
-				"broadcast": {
-					"$ref": "#/definitions/broadcast"
 				}
 			},
 			"additionalProperties": false,
@@ -3337,7 +3337,7 @@
 			"type": "object",
 			"properties": {
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"offset": {
@@ -3508,7 +3508,7 @@
 			"type": "object",
 			"properties": {
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"pid": {
@@ -3651,7 +3651,7 @@
 							"$ref": "#/definitions/pid"
 						},
 						"href": {
-							"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+							"format": "uri",
 							"type": "string"
 						}
 					},
@@ -3735,7 +3735,7 @@
 			"type": "object",
 			"properties": {
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				}
 			},
@@ -3797,7 +3797,7 @@
 			"type": "string"
 		},
 		"snippet_url": {
-			"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+			"format": "uri",
 			"type": "string"
 		},
 		"release_title": {
@@ -4396,11 +4396,11 @@
 			"type": "boolean"
 		},
 		"uri": {
-			"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+			"format": "uri",
 			"type": "string"
 		},
 		"url": {
-			"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+			"format": "uri",
 			"type": "string"
 		},
 		"date_range": {
@@ -4458,7 +4458,7 @@
 					"type": "string"
 				},
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"filters": {
@@ -4658,7 +4658,7 @@
 					"type": "string"
 				},
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				}
 			},
@@ -4780,7 +4780,7 @@
 			"type": "object",
 			"properties": {
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"is_default": {
@@ -4828,7 +4828,7 @@
 					"type": "string"
 				},
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"name": {
@@ -4899,7 +4899,7 @@
 			"type": "object",
 			"properties": {
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"result_type": {
@@ -4957,7 +4957,7 @@
 					"type": "string"
 				},
 				"href": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"pid": {
@@ -5135,7 +5135,7 @@
 					"$ref": "#/definitions/source_asset"
 				},
 				"template_url": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"type": {
@@ -5560,7 +5560,7 @@
 					"type": "object",
 					"properties": {
 						"href": {
-							"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+							"format": "uri",
 							"type": "string"
 						},
 						"result_type": {
@@ -5570,7 +5570,7 @@
 							"type": "object",
 							"properties": {
 								"href": {
-									"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+									"format": "uri",
 									"type": "string"
 								},
 								"result_type": {
@@ -6591,7 +6591,7 @@
 					"type": "object",
 					"properties": {
 						"href": {
-							"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+							"format": "uri",
 							"type": "string"
 						},
 						"contributions_mixin_contribution": {
@@ -6604,7 +6604,7 @@
 							"type": "object",
 							"properties": {
 								"href": {
-									"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+									"format": "uri",
 									"type": "string"
 								},
 								"contributions_mixin_contribution": {
@@ -6689,7 +6689,7 @@
 					"type": "object",
 					"properties": {
 						"href": {
-							"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+							"format": "uri",
 							"type": "string"
 						},
 						"type": {
@@ -6702,7 +6702,7 @@
 							"type": "object",
 							"properties": {
 								"href": {
-									"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+									"format": "uri",
 									"type": "string"
 								},
 								"type": {
@@ -6931,7 +6931,7 @@
 					"type": "object",
 					"properties": {
 						"template_url": {
-							"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+							"format": "uri",
 							"type": "string"
 						},
 						"pid": {
@@ -6944,7 +6944,7 @@
 							"type": "object",
 							"properties": {
 								"template_url": {
-									"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+									"format": "uri",
 									"type": "string"
 								},
 								"pid": {
@@ -6984,21 +6984,21 @@
 							"type": "object",
 							"properties": {
 								"template_url": {
-									"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+									"format": "uri",
 									"type": "string"
 								},
 								"type": {
 									"type": "string"
 								},
 								"href": {
-									"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+									"format": "uri",
 									"type": "string"
 								},
 								"inherited_from": {
 									"type": "object",
 									"properties": {
 										"href": {
-											"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+											"format": "uri",
 											"type": "string"
 										},
 										"result_type": {
@@ -7014,21 +7014,21 @@
 											"type": "object",
 											"properties": {
 												"template_url": {
-													"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+													"format": "uri",
 													"type": "string"
 												},
 												"type": {
 													"type": "string"
 												},
 												"href": {
-													"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+													"format": "uri",
 													"type": "string"
 												},
 												"inherited_from": {
 													"type": "object",
 													"properties": {
 														"href": {
-															"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+															"format": "uri",
 															"type": "string"
 														},
 														"result_type": {
@@ -7074,14 +7074,14 @@
 								"type": "object",
 								"properties": {
 									"template_url": {
-										"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+										"format": "uri",
 										"type": "string"
 									},
 									"type": {
 										"type": "string"
 									},
 									"href": {
-										"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+										"format": "uri",
 										"type": "string"
 									},
 									"alternate_images": {
@@ -7093,14 +7093,14 @@
 													"type": "object",
 													"properties": {
 														"template_url": {
-															"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+															"format": "uri",
 															"type": "string"
 														},
 														"type": {
 															"type": "string"
 														},
 														"href": {
-															"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+															"format": "uri",
 															"type": "string"
 														}
 													},
@@ -7142,7 +7142,7 @@
 			"type": "object",
 			"properties": {
 				"replaced_by": {
-					"pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(?([^#]*))?(#(.*))?",
+					"format": "uri",
 					"type": "string"
 				},
 				"deprecated_since": {
